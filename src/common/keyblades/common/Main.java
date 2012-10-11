@@ -21,6 +21,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import java.util.Random;
 
 import keyblades.client.CommonProxykeyblades;
+import keyblades.common.Items.*;
+import keyblades.common.Keyblades.*;
 
 @Mod(modid="mod_KeybladesMod",name="KeybladesMod",version="0.5.4")
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
@@ -31,11 +33,11 @@ public class Main {
 	static EnumToolMaterial olympiainfo = EnumHelper.addToolMaterial("OlympiaInfo", 2, 515, 7F, 5, 14);
 	static EnumToolMaterial obliv = EnumHelper.addToolMaterial("Oblivion_", 2, 600, 7F, 15, 14);
 	static EnumToolMaterial crab = EnumHelper.addToolMaterial("Crabclaw", 2, 520, 7F, 4, 14);
-	static EnumToolMaterial rose = EnumHelper.addToolMaterial("DivineRose", 2, 550, 7F, 11, 14);
+	static EnumToolMaterial rose = EnumHelper.addToolMaterial("DivineRose", 2, 550, 7F, 4, 14);
 	static EnumToolMaterial lion = EnumHelper.addToolMaterial("LionH", 2, 545, 7F, 10, 14);
-	static EnumToolMaterial hop = EnumHelper.addToolMaterial("KeybladeHOP", 2, 610, 7F, 12, 14);
+	static EnumToolMaterial hop = EnumHelper.addToolMaterial("KeybladeHOP", 2, 610, 7F, 6, 14);
 	static EnumToolMaterial x_blades = EnumHelper.addToolMaterial("X blade", 2, 2500, 7F, 40, 14);
-	static EnumToolMaterial wingedangel = EnumHelper.addToolMaterial("OneWing", 2, 525, 7F, 8, 14);
+	static EnumToolMaterial wingedangel = EnumHelper.addToolMaterial("OneWing", 2, 525, 7F, 5, 14);
 	static EnumToolMaterial junglestar = EnumHelper.addToolMaterial("JunStar", 2, 510, 7F, 5, 14);
 	static EnumToolMaterial harp = EnumHelper.addToolMaterial("Harp", 2, 525, 7F, 8, 14);
 	static EnumToolMaterial spellb = EnumHelper.addToolMaterial("Binder", 2, 505, 7F, 4, 14);
@@ -146,7 +148,7 @@ public class Main {
 		LanguageRegistry.addName(blazingcrystal, "Blazing Crystal");
 		frostcrystal = new IceCrystal(1564).setIconIndex(15).setItemName("FrostCry");
 		LanguageRegistry.addName(frostcrystal, "Frost Crystal");
-		lightningcrystal = new ItemsK(1565).setIconIndex(17).setItemName("Lightcry");
+		lightningcrystal = new LightningCrystal(1565).setIconIndex(17).setItemName("Lightcry");
 		LanguageRegistry.addName(lightningcrystal, "Lightning Crystal");
 		densecrystal = new ItemsK(1566).setIconIndex(13).setItemName("dcru");
 		LanguageRegistry.addName(densecrystal, "Dense Crystal");
