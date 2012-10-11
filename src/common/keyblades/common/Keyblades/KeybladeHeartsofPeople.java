@@ -22,7 +22,7 @@ public class KeybladeHeartsofPeople extends ItemSword{
 	}
 	public boolean hitEntity(ItemStack items, EntityLiving Living1, EntityLiving Living2)
 	{
-		Living1.addPotionEffect(new PotionEffect(19, 25, 1));
+		Living1.addPotionEffect(new PotionEffect(19, 50, 1));
 		return true;
 	}
 

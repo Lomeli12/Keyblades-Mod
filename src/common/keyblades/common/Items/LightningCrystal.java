@@ -19,7 +19,8 @@ public class LightningCrystal extends Item {
 	public LightningCrystal(int i)
 	{
 		super(i);
-		maxStackSize = 64;
+		maxStackSize = 1;
+		this.setMaxDamage(10);
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	public String getTextureFile()
@@ -27,7 +28,7 @@ public class LightningCrystal extends Item {
 		return "/Keyblademod/items.png";
 	}
 	
-	 public boolean onItemUse(ItemStack itemstack, World world, EntityPlayer entityplayer)
+	 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer)
 	 {
 		 float f = 1.0F;
 		 float f1 = entityplayer.prevRotationPitch + (entityplayer.rotationPitch - entityplayer.prevRotationPitch) * f;
@@ -48,7 +49,7 @@ public class LightningCrystal extends Item {
 		 MovingObjectPosition movingobjectposition = world.rayTraceBlocks_do_do(vec3d, vec3d1, false, true);
 		 if (movingobjectposition == null) 
 		 {
-			 return false;
+			 return itemstack;
 		 }
 		 if (movingobjectposition.typeOfHit == EnumMovingObjectType.TILE) 
 		 {
@@ -57,7 +58,7 @@ public class LightningCrystal extends Item {
 			 int k = movingobjectposition.blockZ;
 			 world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
 	     }
-	        return true;
-
+		 	itemstack.damageItem(1, entityplayer);
+	        return itemstack;
 	    }
 }
