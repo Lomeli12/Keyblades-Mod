@@ -16,7 +16,7 @@ public class Orichalcumore extends Block {
     }
 	public String getTextureFile()
 	{
-		return "/Keyblademod/blocks.png";
+		return "/keyblades/art/blocks.png";
 	}
 	
 	public int idDropped(int par1, Random par2Random, int par3)

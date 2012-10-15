@@ -12,6 +12,6 @@ public class ItemsK extends Item {
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/items.png";
+		return "/keyblades/art/items.png";
 	}
 }

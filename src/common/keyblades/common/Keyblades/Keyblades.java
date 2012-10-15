@@ -13,6 +13,6 @@ public class Keyblades extends ItemSword{
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/keyblades.png";
+		return "/keyblades/art/keyblades.png";
 	}
 }

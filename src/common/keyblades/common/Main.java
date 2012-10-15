@@ -11,6 +11,7 @@ import net.minecraft.src.ItemDye;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.Init;
@@ -18,13 +19,16 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import keyblades.client.CommonProxykeyblades;
 import keyblades.common.Items.*;
 import keyblades.common.Keyblades.*;
+import keyblades.common.network.*;
 
-@Mod(modid="mod_KeybladesMod",name="KeybladesMod",version="0.5.4")
+@Mod(modid="mod_KeybladesMod",name="KeybladesMod",version="0.5.8")
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
 public class Main {
 	static EnumToolMaterial Kingdom_key = EnumHelper.addToolMaterial("Kingdom Key", 2, 500, 7F, 3, 14);

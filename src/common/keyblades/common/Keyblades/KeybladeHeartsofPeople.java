@@ -18,7 +18,7 @@ public class KeybladeHeartsofPeople extends ItemSword{
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/keyblades.png";
+		return "/keyblades/art/keyblades.png";
 	}
 	public boolean hitEntity(ItemStack items, EntityLiving Living1, EntityLiving Living2)
 	{

@@ -12,6 +12,6 @@ public class Blockores extends Block {
     }
 	public String getTextureFile()
 	{
-		return "/Keyblademod/blocks.png";
+		return "/keyblades/art/blocks.png";
 	}
 }

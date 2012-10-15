@@ -12,6 +12,6 @@ public class Keychains extends Item {
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/keychains.png";
+		return "/keyblades/art/keychains.png";
 	}
 }

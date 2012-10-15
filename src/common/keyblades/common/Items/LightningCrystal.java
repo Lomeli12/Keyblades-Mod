@@ -25,7 +25,7 @@ public class LightningCrystal extends Item {
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/items.png";
+		return "/keyblades/art/items.png";
 	}
 	
 	 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer)

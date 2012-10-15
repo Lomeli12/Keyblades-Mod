@@ -1,5 +1,6 @@
 package keyblades.common.Items;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.EntityLiving;
@@ -8,6 +9,9 @@ import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.PotionEffect;
 import net.minecraft.src.World;
+
+import keyblades.common.magic.MPCounter;
+import keyblades.common.network.ClientMessager;
 
 public class IceCrystal extends Item {
 	public IceCrystal(int i)
@@ -18,7 +22,7 @@ public class IceCrystal extends Item {
 	}
 	public String getTextureFile()
 	{
-		return "/Keyblademod/items.png";
+		return "/keyblades/art/items.png";
 	}
 	 public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
 	 {
@@ -51,23 +55,28 @@ public class IceCrystal extends Item {
 	        {
 	            ++par4;
 	        }
-
-	        if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6))
+	        if(MPCounter.MP >= 25){
+	        	if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6))
+	        	{
+	        		return false;
+	        	}
+	        	else
+	        	{
+	        		int var11 = par3World.getBlockId(par4, par5, par6);
+	        		if (var11 == 0)
+	        		{
+	        			par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+	        			par3World.setBlockWithNotify(par4, par5, par6, Block.ice.blockID);
+	        			
+	        		}
+	        		
+	        	}
+	        	MPCounter.loseMP(25/2);
+	        	return true;
+	        }else
 	        {
-	            return false;
-	        }
-	        else
-	        {
-	            int var11 = par3World.getBlockId(par4, par5, par6);
-
-	            if (var11 == 0)
-	            {
-	                par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-	                par3World.setBlockWithNotify(par4, par5, par6, Block.ice.blockID);
-	            }
-
-	            //par1ItemStack.damageItem(1, par2EntityPlayer);
-	            return true;
+	        	ClientMessager.showInChat("Not Enough MP!");
+	        	return true;
 	        }
 	}
 }
