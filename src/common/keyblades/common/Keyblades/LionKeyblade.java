@@ -17,7 +17,7 @@ public class LionKeyblade extends ItemSword
 		return "/keyblades/art/keyblades.png";
 	}
 	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer)
-    {
+	{
 		teep = itemRand.nextFloat();
 		FireMagic.useFireMagic(20, itemstack, world, entityplayer, teep);
 		return itemstack;
