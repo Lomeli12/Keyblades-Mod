@@ -1,4 +1,4 @@
-package keyblades.common.network;
+package keyblades.common.Network;
 
 import java.util.EnumSet;
 
@@ -8,13 +8,13 @@ import org.lwjgl.input.Keyboard;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.KeyBindingRegistry.KeyHandler;
-import cpw.mods.fml.common.TickType;
+import cpw.mods.fml.common.*;
 
-import keyblades.common.magic.MPCounter;
-import keyblades.common.network.ClientMessager;
+import keyblades.common.Magic.MPCounter;
+import keyblades.common.Network.ClientMessager;
 
-public class KeyBindings extends KeyHandler {
-	
+public class KeyBindings extends KeyHandler 
+{
 	 static KeyBinding magicCheck = new KeyBinding("MP", Keyboard.KEY_M);
 	 
 	 public KeyBindings()
@@ -32,12 +32,11 @@ public class KeyBindings extends KeyHandler {
 	public void keyDown(EnumSet<TickType> types, KeyBinding kb,
 			boolean tickEnd, boolean isRepeat) {
 		
-		
 	}
 
 	@Override
 	public void keyUp(EnumSet<TickType> types, KeyBinding kb, boolean tickEnd) {
-		ClientMessager.showInChat("MP: " + MPCounter.MP + "/" + MPCounter.MPMax);
+		ClientMessager.displayInChat("MP: " + MPCounter.MP + "/" + MPCounter.MPMax);
 	}
 
 	@Override
@@ -45,7 +44,4 @@ public class KeyBindings extends KeyHandler {
 		// TODO Auto-generated method stub
 		return EnumSet.of(TickType.CLIENT);
 	}
-	 
-	 
-	 
 }

@@ -1,17 +1,11 @@
 package keyblades.common.Items;
 
 import cpw.mods.fml.client.FMLClientHandler;
-import net.minecraft.src.Block;
-import net.minecraft.src.CreativeTabs;
-import net.minecraft.src.EntityLiving;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.PotionEffect;
-import net.minecraft.src.World;
+import cpw.mods.fml.common.Side;
+import net.minecraft.src.*;
 
-import keyblades.common.magic.MPCounter;
-import keyblades.common.network.ClientMessager;
+import keyblades.common.Magic.MPCounter;
+import keyblades.common.Network.ClientMessager;
 
 public class IceCrystal extends Item {
 	public IceCrystal(int i)
@@ -24,9 +18,9 @@ public class IceCrystal extends Item {
 	{
 		return "/keyblades/art/items.png";
 	}
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
-	{
-		if (par7 == 0)
+	 public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
+	 {
+	        if (par7 == 0)
 	        {
 	            --par5;
 	        }
@@ -71,11 +65,11 @@ public class IceCrystal extends Item {
 	        		}
 	        		
 	        	}
-	        	MPCounter.loseMP(25/2);
+	        	MPCounter.loseMP(14.5);
 	        	return true;
 	        }else
 	        {
-	        	ClientMessager.showInChat("Not Enough MP!");
+	        	ClientMessager.displayInChat("Not Enough MP");
 	        	return true;
 	        }
 	}

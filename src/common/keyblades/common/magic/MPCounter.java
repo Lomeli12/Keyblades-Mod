@@ -1,30 +1,30 @@
-package keyblades.common.magic;
+package keyblades.common.Magic;
 
 import keyblades.common.Main;
 import java.util.*;
 
 public class MPCounter {
-	public static int MP = 200;
-	public static int MPMax = 200;
+	public static double MP = 200;
+	public static double MPMax = 200;
 	
-	public static void addMP(int e){
+	public static void addMP(double e){
 		MPCounter.MP = MPCounter.MP + e;
 		if(MPCounter.MP > MPCounter.MPMax)
 		{
-			int diff = MPCounter.MP - MPCounter.MPMax;
+			double diff = MPCounter.MP - MPCounter.MPMax;
 			MPCounter.MP = MPCounter.MP - diff;
 		}
 	}
 	
-	public static void loseMP(int e){
+	public static void loseMP(double e){
 		MPCounter.MP = MPCounter.MP - e;
 		if(MPCounter.MP < 0)
 		{
 			MPCounter.MP = 0;
 		}
 	}
-	/*
-	public boolean regenMP()
+	
+	public static boolean regenMP()
 	{
 		new Timer().schedule(
 			new TimerTask(){
@@ -35,5 +35,5 @@ public class MPCounter {
 			}, 5
 		);
 		return true;
-	}*/
+	}
 }

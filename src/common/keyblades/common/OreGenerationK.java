@@ -2,6 +2,8 @@ package keyblades.common;
 
 import java.util.Random;
 
+import keyblades.common.Blocks.*;
+
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldGenMinable;
@@ -27,9 +29,9 @@ public class OreGenerationK  implements IWorldGenerator
 		int Ycoordcry = random.nextInt(30);
 		int YcoordOric = random.nextInt(15);
 		int Zcoord = blockZ + random.nextInt(16);
-		(new WorldGenMinable(keyblades.common.Main.gummiOreO.blockID, 15)).generate(world, random, Xcoord, Ycoord, Zcoord);
-		(new WorldGenMinable(keyblades.common.Main.DullCrystalore.blockID, 7)).generate(world, random, Xcoord, Ycoordcry, Zcoord);
-		(new WorldGenMinable(keyblades.common.Main.Orichalcumore.blockID, 3)).generate(world, random, Xcoord, YcoordOric, Zcoord);
+		(new WorldGenMinable(RegisterBlocks.gummiOreO.blockID, 15)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RegisterBlocks.DullCrystalore.blockID, 7)).generate(world, random, Xcoord, Ycoordcry, Zcoord);
+		(new WorldGenMinable(RegisterBlocks.Orichalcumore.blockID, 3)).generate(world, random, Xcoord, YcoordOric, Zcoord);
 	}
 	private void generateNether(World world, Random random, int blockX, int blockY)
 	{
