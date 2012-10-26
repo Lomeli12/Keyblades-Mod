@@ -31,7 +31,7 @@ public class OreGenerationK  implements IWorldGenerator
 		int Zcoord = blockZ + random.nextInt(16);
 		(new WorldGenMinable(RegisterBlocks.gummiOreO.blockID, 15)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		(new WorldGenMinable(RegisterBlocks.DullCrystalore.blockID, 7)).generate(world, random, Xcoord, Ycoordcry, Zcoord);
-		(new WorldGenMinable(RegisterBlocks.Orichalcumore.blockID, 3)).generate(world, random, Xcoord, YcoordOric, Zcoord);
+		(new WorldGenMinable(RegisterBlocks.OrichalcumoreB.blockID, 3)).generate(world, random, Xcoord, YcoordOric, Zcoord);
 	}
 	private void generateNether(World world, Random random, int blockX, int blockY)
 	{

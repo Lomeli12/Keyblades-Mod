@@ -36,7 +36,7 @@ public class ThunderMagic
 				 int j = movingobjectposition.blockY;
 				 int k = movingobjectposition.blockZ;
 				 world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
-				 MPCounter.loseMP(cost);
+				 MPCounter.loseMP(cost, entityplayer);
 			 }else
 			 {
 				 ClientMessager.displayInChat("Not Enought MP!");

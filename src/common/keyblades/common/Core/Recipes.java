@@ -1,4 +1,4 @@
-package keyblades.common;
+package keyblades.common.Core;
 
 import keyblades.common.*;
 import keyblades.common.Blocks.*;
@@ -14,6 +14,27 @@ public class Recipes
 {
 	public static void registerRecipes()
 	{
+		GameRegistry.addRecipe(new ItemStack(RegisterKeyblades.xblade, 1), new Object[]{
+			" D "," L ","XOX", 'D',RegisterItems.puredarknessorb, 'L',RegisterItems.purelightorb, 'X',RegisterKeyblades.xBladefrag, 'O',RegisterItems.Orichalcumplus
+		});
+		GameRegistry.addRecipe(new ItemStack(RegisterKeyblades.xblade, 1), new Object[]{
+			" L "," D ","XOX", 'D',RegisterItems.puredarknessorb, 'L',RegisterItems.purelightorb, 'X',RegisterKeyblades.xBladefrag, 'O',RegisterItems.Orichalcumplus
+		});
+		GameRegistry.addRecipe(new ItemStack(RegisterKeyblades.xBladefrag, 1), new Object[]{
+			"DDD","PKP","DDD", 'D',Item.diamond, 'P',RegisterItems.poweredDust, 'K',RegisterKeyblades.KingdomKey
+		});
+		GameRegistry.addRecipe(new ItemStack(RegisterItems.purelightorb, 1), new Object[]{
+			"HHH","OHO","HHH", 'O',RegisterItems.Orichalcum, 'H',RegisterItems.hearts
+		});
+		GameRegistry.addRecipe(new ItemStack(RegisterItems.darkheart9, 1), new Object[]{
+			"DDD","DDD","DDD", 'D',RegisterItems.darkorb
+		});
+		GameRegistry.addRecipe(new ItemStack(RegisterItems.darkheart4, 1), new Object[]{
+			" D ","DHD"," D ", 'D',RegisterItems.darkorb, 'H',RegisterItems.hearts
+		});
+		GameRegistry.addShapelessRecipe(new ItemStack(RegisterItems.puredarknessorb, 1),new Object[]{
+			RegisterItems.darkheart4, RegisterItems.darkheart9, RegisterItems.Orichalcum
+		});
 		GameRegistry.addShapelessRecipe(new ItemStack(RegisterItems.poweredDust, 3), new Object[]
 				{
 					Item.flint, Item.redstone, Item.lightStoneDust, RegisterItems.dullcrystal
@@ -84,7 +105,7 @@ public class Recipes
 				});
 		GameRegistry.addRecipe(new ItemStack(RegisterItems.Orichalcumplus,1), new Object[]
 				{
-					"ROR","RDR","RIR", 'R',Item.redstone, 'O',RegisterItems.Orichalcum, 'D',Item.diamond, 'I',Item.ingotIron
+					"FDF","ROR","FIF", 'R',Item.emerald, 'O',RegisterItems.Orichalcum, 'D',Block.blockDiamond, 'I',Block.blockSteel, 'F',Item.flint
 				});
 		GameRegistry.addRecipe(new ItemStack(RegisterKeyblades.Olympia, 1), new Object[]
 				{
@@ -172,8 +193,8 @@ public class Recipes
 				});
 		
 		//Smelting
-		GameRegistry.addSmelting(RegisterBlocks.DullCrystalore.blockID, new ItemStack(RegisterItems.dullcrystal,1), 0.1F);
-		GameRegistry.addSmelting(RegisterBlocks.gummiOreO.blockID, new ItemStack(RegisterItems.gummidropO,3), 0.1F);
-		GameRegistry.addSmelting(RegisterBlocks.Orichalcumore.blockID, new ItemStack(RegisterItems.Orichalcum,1), 0.1F);
+		GameRegistry.addSmelting(RegisterBlocks.dullCrystalOreID, new ItemStack(RegisterItems.dullcrystal,1), 0.1F);
+		GameRegistry.addSmelting(RegisterBlocks.gummiOreID, new ItemStack(RegisterItems.gummidropO,3), 0.1F);
+		GameRegistry.addSmelting(RegisterBlocks.OrichalcumoreID, new ItemStack(RegisterItems.Orichalcum,1), 0.1F);
 	}
 }

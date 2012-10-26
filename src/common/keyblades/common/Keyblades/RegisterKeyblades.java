@@ -37,35 +37,55 @@ public class RegisterKeyblades {
 	public static Item KeybladeHOP;
 	public static Item LionHeart;
 	public static Item OneWingAngel;
+	
+	public static Item xBladefrag;
+	public static int xBladefragID;
+	
+	public static int Soul_EaterID;
+	public static int KingdomKeyID;
+	public static int xbladeID;
+	public static int KingdomKeyDID;
+	public static int OlympiaID;
+	public static int LadyluckID;
+	public static int MetalChocoboID;
+	public static int OblivionID;
+	public static int DivineRoseID;
+	public static int CrabclawID;
+	public static int KeybladeHOPID;
+	public static int LionHeartID;
+	public static int OneWingAngelID;
 	public static void registerKeyblades()
 	{
 		//Register Keyblades
-		KingdomKey  = new Keyblades(1569, Kingdom_key).setIconIndex(0).setItemName("Keyblade-Kingdom");
+		KingdomKey  = new Keyblades(KingdomKeyID, Kingdom_key).setIconIndex(0).setItemName("Keyblade-Kingdom");
 		LanguageRegistry.addName(KingdomKey, "Keyblade: Kingdom Key");
-		xblade  = new Keyblades(1570, x_blades).setIconIndex(16).setItemName("Keyblade-X");
+		xblade  = new Keyblades(xbladeID, x_blades).setIconIndex(16).setItemName("Keyblade-X");
 		LanguageRegistry.addName(xblade, "X-blade");
-		KingdomKeyD  = new Keyblades(1574, Kingdom_key).setIconIndex(17).setItemName("Keyblade-KingdomD");
+		KingdomKeyD  = new Keyblades(KingdomKeyDID, Kingdom_key).setIconIndex(17).setItemName("Keyblade-KingdomD");
 		LanguageRegistry.addName(KingdomKeyD, "Keyblade: Kingdom Key D");
-		Olympia  = new Keyblades(1577, olympiainfo).setIconIndex(1).setItemName("Keyblade-Olympia");
+		Olympia  = new Keyblades(OlympiaID, olympiainfo).setIconIndex(1).setItemName("Keyblade-Olympia");
 		LanguageRegistry.addName(Olympia, "Keyblade: Olympia");
-		Ladyluck = new Keyblades(1582, Lady_Luck).setIconIndex(3).setItemName("Keyblade-Ladyluck");
+		Ladyluck = new Keyblades(LadyluckID, Lady_Luck).setIconIndex(3).setItemName("Keyblade-Ladyluck");
 		LanguageRegistry.addName(Ladyluck, "Keyblade: Lady Luck");
-		MetalChocobo = new Keyblades(1583, MetalChoco).setIconIndex(4).setItemName("Keyblade-Metal");
+		MetalChocobo = new Keyblades(MetalChocoboID, MetalChoco).setIconIndex(4).setItemName("Keyblade-Metal");
 		LanguageRegistry.addName(MetalChocobo, "Keyblade: Metal Chocobo");
-		Oblivion  = new Keyblades(1578, obliv).setIconIndex(2).setItemName("Keyblade-Obliv");
+		Oblivion  = new Keyblades(OblivionID, obliv).setIconIndex(2).setItemName("Keyblade-Obliv");
 		LanguageRegistry.addName(Oblivion, "Keyblade: Oblivion");
-		DivineRose = new Keyblades(1585, rose).setIconIndex(5).setItemName("DRose");
+		DivineRose = new Keyblades(DivineRoseID, rose).setIconIndex(5).setItemName("Keyblade-DRose");
 		LanguageRegistry.addName(DivineRose, "Keyblade: Divine Rose");
-		Crabclaw = new Keyblades(1586, crab).setIconIndex(6).setItemName("Crab");
+		Crabclaw = new Keyblades(CrabclawID, crab).setIconIndex(6).setItemName("Keyblade-Crab");
 		LanguageRegistry.addName(Crabclaw, "Keyblade: CrabClaw");
-		KeybladeHOP = new KeybladeHeartsofPeople(1587, hop).setIconIndex(254).setItemName("KeyHOP");
+		KeybladeHOP = new KeybladeHeartsofPeople(KeybladeHOPID, hop).setIconIndex(254).setItemName("Keyblade-KeyHOP");
 		LanguageRegistry.addName(KeybladeHOP, "Keyblade of People's Hearts");
-		LionHeart = new LionKeyblade(1591,lion).setIconIndex(7).setItemName("LionHeart");
+		LionHeart = new LionKeyblade(LionHeartID,lion).setIconIndex(7).setItemName("LionHeart");
 		LanguageRegistry.addName(LionHeart, "Keyblade: Lionheart");
-		OneWingAngel = new OneWingedAngel(1593, wingedangel).setIconIndex(8).setItemName("Angel");
+		OneWingAngel = new OneWingedAngel(OneWingAngelID, wingedangel).setIconIndex(8).setItemName("Keyblade-Angel");
 		LanguageRegistry.addName(OneWingAngel, "Keyblade: One-Winged Angel");
+		
+		xBladefrag = new xBladeFragment(xBladefragID, soul).setIconIndex(0).setItemName("PieceX");
+		LanguageRegistry.addName(xBladefrag, "Piece of X");
 
-		Soul_Eater = new SoulEater(1584, soul).setIconIndex(255).setItemName("Soul-Eater");
+		Soul_Eater = new SoulEater(Soul_EaterID, soul).setIconIndex(255).setItemName("Soul-Eater");
 		LanguageRegistry.addName(Soul_Eater, "Soul Eater");
 	}
 }

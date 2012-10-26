@@ -24,7 +24,7 @@ public class FireMagic
 				fireball.accelerationZ = look.zCoord * 0.1;
 				world.spawnEntityInWorld(fireball);
 				itemstack.damageItem(1, entityplayer);
-				MPCounter.loseMP(cost);
+				MPCounter.loseMP(cost, entityplayer);
             }
 		}
 		else{
@@ -66,7 +66,7 @@ public class FireMagic
 	            ++par4;
 	        }
 
-	        if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6))
+	        if (!par2EntityPlayer.func_82247_a(par4, par5, par6, par7, par1ItemStack))
 	        {
 	        }
 	        else
@@ -78,7 +78,7 @@ public class FireMagic
 	                par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, teep * 0.4F + 0.8F);
 	                par3World.setBlockWithNotify(par4, par5, par6, Block.fire.blockID);
 	            }
-				MPCounter.loseMP(cost);
+				MPCounter.loseMP(cost, par2EntityPlayer);
 	            par1ItemStack.damageItem(1, par2EntityPlayer);
 	        }
 		}else

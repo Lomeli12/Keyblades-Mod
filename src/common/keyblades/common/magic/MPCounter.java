@@ -3,6 +3,8 @@ package keyblades.common.Magic;
 import keyblades.common.Main;
 import java.util.*;
 
+import net.minecraft.src.EntityPlayer;
+
 public class MPCounter {
 	public static double MP = 200;
 	public static double MPMax = 200;
@@ -16,8 +18,15 @@ public class MPCounter {
 		}
 	}
 	
-	public static void loseMP(double e){
-		MPCounter.MP = MPCounter.MP - e;
+	public static void loseMP(double e, EntityPlayer player1){
+		if (player1.capabilities.isCreativeMode)
+        {
+			
+        }
+		else
+		{
+			MPCounter.MP = MPCounter.MP - e;
+		}
 		if(MPCounter.MP < 0)
 		{
 			MPCounter.MP = 0;

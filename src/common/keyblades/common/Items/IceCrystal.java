@@ -50,7 +50,7 @@ public class IceCrystal extends Item {
 	            ++par4;
 	        }
 	        if(MPCounter.MP >= 25){
-	        	if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6))
+	        	if (!par2EntityPlayer.func_82247_a(par4, par5, par6, par7, par1ItemStack))
 	        	{
 	        		return false;
 	        	}
@@ -65,7 +65,7 @@ public class IceCrystal extends Item {
 	        		}
 	        		
 	        	}
-	        	MPCounter.loseMP(14.5);
+	        	MPCounter.loseMP(14.5, par2EntityPlayer);
 	        	return true;
 	        }else
 	        {

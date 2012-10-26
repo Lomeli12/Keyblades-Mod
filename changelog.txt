@@ -1,0 +1,6 @@
+Changelog
+
+0.6.3
+- Changed all the items to use config files
+- Add recipe for items
+- Minecraft 1.4.2 compatibility 

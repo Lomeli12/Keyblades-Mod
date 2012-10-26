@@ -8,8 +8,8 @@ import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Material;
 
-public class Orichalcumore extends Block {
-	public Orichalcumore(int par1, int par2)
+public class OrichalcumOre extends Block {
+	public OrichalcumOre(int par1, int par2)
     {
         super(par1, par2, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);

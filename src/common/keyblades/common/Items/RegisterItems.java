@@ -10,10 +10,15 @@ public class RegisterItems {
 	public static Item eitherPotion;
 	public static Item hiEither;
 	public static Item megaEither;
+	public static int eitherPotionID;
+	public static int hiEitherID;
+	public static int megaEitherID;
 	
 	//Potion materials
 	public static Item poweredDust;
 	public static Item enrichedSlime;
+	public static int poweredDustID;
+	public static int enrichedSlimeID;
 	
 	//Crafting Materials
 	public static Item chains;
@@ -38,6 +43,28 @@ public class RegisterItems {
 	public static Item serenitycrystal;
 	public static Item Orichalcum;
 	public static Item Orichalcumplus;
+	public static int chainsID;
+	public static int gummidropOID;
+	public static int heartsID;
+	public static int purelightorbID;
+	public static int darkorbID;
+	public static int darkheart4ID;
+	public static int darkheart9ID;
+	public static int puredarknessorbID;
+	public static int dullcrystalID;
+	public static int densecrystalID;
+	public static int twilightcrystalID;
+	public static int mythrilcrystalID;
+	public static int blazingcrystalID;
+	public static int frostcrystalID;
+	public static int lightningcrystalID;
+	public static int powercrystalID;
+	public static int lucidcrystalID;
+	public static int mysterygooID;
+	public static int mysterypowderID;
+	public static int serenitycrystalID;
+	public static int OrichalcumID;
+	public static int OrichalcumplusID;
 	
 	//keychains
 	public static Item KingKeyDchain;
@@ -50,74 +77,86 @@ public class RegisterItems {
 	public static Item corrupt;
 	public static Item lionchain;
 	public static Item onewingchain;
+	public static int KingKeyDchainID;
+	public static int OlympiachainID;
+	public static int OblivionchainID;
+	public static int LadyluckchainID;
+	public static int MetalChocochainID;
+	public static int crabchainID;
+	public static int rosechainID;
+	public static int corruptID;
+	public static int lionchainID;
+	public static int onewingchainID;
 	
 	public static void registerItems()
 	{
-		chains = new ItemsK(1554).setIconIndex(7).setItemName("Chaink");
+		chains = new ItemsK(chainsID).setIconIndex(7).setItemName("Chaink");
 		LanguageRegistry.addName(chains, "Iron Chain");
-		gummidropO = new ItemsK(1555).setIconIndex(0).setItemName("OGummiDrop");
+		gummidropO = new ItemsK(gummidropOID).setIconIndex(0).setItemName("OGummiDrop");
 		LanguageRegistry.addName(gummidropO, "Gummi Drop");
-		hearts = new ItemsK(1556).setIconIndex(1).setItemName("HeartK");
+		hearts = new ItemsK(heartsID).setIconIndex(1).setItemName("HeartK");
 		LanguageRegistry.addName(hearts, "Heart");
-		purelightorb = new ItemsK(1557).setIconIndex(6).setItemName("PHeartK");
+		purelightorb = new ItemsK(purelightorbID).setIconIndex(6).setItemName("PHeartK");
 		LanguageRegistry.addName(purelightorb, "Heart of Pure Light");
-		darkorb = new ItemsK(1558).setIconIndex(2).setItemName("DarkK");
+		darkorb = new ItemsK(darkorbID).setIconIndex(2).setItemName("DarkK");
 		LanguageRegistry.addName(darkorb, "Essence of Darkness");
-		darkheart4 = new ItemsK(1559).setIconIndex(3).setItemName("Darkh4");
+		darkheart4 = new ItemsK(darkheart4ID).setIconIndex(3).setItemName("Darkh4");
 		LanguageRegistry.addName(darkheart4, "Darkness; lvl 4");
-		darkheart9 = new ItemsK(1560).setIconIndex(4).setItemName("Darkh9");
+		darkheart9 = new ItemsK(darkheart9ID).setIconIndex(4).setItemName("Darkh9");
 		LanguageRegistry.addName(darkheart9, "Darkness: lvl 9");
-		puredarknessorb = new ItemsK(1561).setIconIndex(5).setItemName("Pdarkh");
+		puredarknessorb = new ItemsK(puredarknessorbID).setIconIndex(5).setItemName("Pdarkh");
 		LanguageRegistry.addName(puredarknessorb, "Heart of Pure Darkness");
-		dullcrystal = new ItemsK(1562).setIconIndex(10).setItemName("DCry");
+		dullcrystal = new ItemsK(dullcrystalID).setIconIndex(10).setItemName("DCry");
 		LanguageRegistry.addName(dullcrystal, "Dull Crystal");
-		blazingcrystal = new FireCrystal(1563).setIconIndex(16).setItemName("Firecry");
+		blazingcrystal = new FireCrystal(blazingcrystalID).setIconIndex(16).setItemName("Firecry");
 		LanguageRegistry.addName(blazingcrystal, "Blazing Crystal");
-		frostcrystal = new IceCrystal(1564).setIconIndex(15).setItemName("FrostCry");
+		frostcrystal = new IceCrystal(frostcrystalID).setIconIndex(15).setItemName("FrostCry");
 		LanguageRegistry.addName(frostcrystal, "Frost Crystal");
-		lightningcrystal = new LightningCrystal(1565).setIconIndex(17).setItemName("Lightcry");
+		lightningcrystal = new LightningCrystal(lightningcrystalID).setIconIndex(17).setItemName("Lightcry");
 		LanguageRegistry.addName(lightningcrystal, "Lightning Crystal");
-		densecrystal = new ItemsK(1566).setIconIndex(13).setItemName("dcru");
+		densecrystal = new ItemsK(densecrystalID).setIconIndex(13).setItemName("dcru");
 		LanguageRegistry.addName(densecrystal, "Dense Crystal");
-		twilightcrystal = new ItemsK(1567).setIconIndex(12).setItemName("Tcry");
+		twilightcrystal = new ItemsK(twilightcrystalID).setIconIndex(12).setItemName("Tcry");
 		LanguageRegistry.addName(twilightcrystal, "Twilight Crystal");
-		serenitycrystal = new ItemsK(1568).setIconIndex(11).setItemName("sercry");
+		serenitycrystal = new ItemsK(serenitycrystalID).setIconIndex(11).setItemName("sercry");
 		LanguageRegistry.addName(serenitycrystal, "Serenity Crystal");
-		Orichalcum = new ItemsK(1571).setIconIndex(8).setItemName("OrichalcumI");
+		Orichalcum = new ItemsK(OrichalcumID).setIconIndex(8).setItemName("OrichalcumI");
 		LanguageRegistry.addName(Orichalcum, "Orichalcum");
-		Orichalcumplus = new ItemsK(1572).setIconIndex(9).setItemName("OrichalcumI+");
+		Orichalcumplus = new ItemsK(OrichalcumplusID).setIconIndex(9).setItemName("OrichalcumI+");
 		LanguageRegistry.addName(Orichalcumplus, "Orichalcum+");
-		eitherPotion = new Either(1595, 25).setIconIndex(22).setItemName("eitherP");
+		
+		//potion stuff
+		eitherPotion = new Either(eitherPotionID, 25).setIconIndex(22).setItemName("eitherP");
 		LanguageRegistry.addName(eitherPotion, "Either");
-		hiEither = new Either(1596, 50).setIconIndex(23).setItemName("HiEitherP");
+		hiEither = new Either(hiEitherID, 50).setIconIndex(23).setItemName("HiEitherP");
 		LanguageRegistry.addName(hiEither, "Hi-Either");
-		megaEither = new Either(1599, 150).setIconIndex(24).setItemName("MegEither");
+		megaEither = new Either(megaEitherID, 150).setIconIndex(24).setItemName("MegEither");
 		LanguageRegistry.addName(megaEither, "Mega-Either");
-		poweredDust = new ItemsK(1597).setIconIndex(20).setItemName("pDust");
+		poweredDust = new ItemsK(poweredDustID).setIconIndex(20).setItemName("pDust");
 		LanguageRegistry.addName(poweredDust, "Powered Dust");
-		enrichedSlime = new ItemsK(1598).setIconIndex(21).setItemName("eSlime");
+		enrichedSlime = new ItemsK(enrichedSlimeID).setIconIndex(21).setItemName("eSlime");
 		LanguageRegistry.addName(enrichedSlime, "Enriched Slime");
 		
 		//Keychains
-		KingKeyDchain = new Keychains(1573).setIconIndex(0).setItemName("KingdomKeyDchain");
+		KingKeyDchain = new Keychains(KingKeyDchainID).setIconIndex(0).setItemName("KingdomKeyDchain");
 		LanguageRegistry.addName(KingKeyDchain, "Keychain: Kingdom Key D");
-		Olympiachain = new Keychains(1575).setIconIndex(1).setItemName("Olympiachain");
+		Olympiachain = new Keychains(OlympiachainID).setIconIndex(1).setItemName("Olympiachain");
 		LanguageRegistry.addName(Olympiachain, "Keychain: Olympia");
-		Oblivionchain = new Keychains(1576).setIconIndex(16).setItemName("Oblivionchain");
+		Oblivionchain = new Keychains(OblivionchainID).setIconIndex(16).setItemName("Oblivionchain");
 		LanguageRegistry.addName(Oblivionchain, "Keychain: Oblivion");
-		MetalChocochain = new Keychains(1580).setIconIndex(2).setItemName("MetalChain");
+		MetalChocochain = new Keychains(MetalChocochainID).setIconIndex(2).setItemName("MetalChain");
 		LanguageRegistry.addName(MetalChocochain, "Keychain: Metal Chocobo");
-		Ladyluckchain = new Keychains(1581).setIconIndex(3).setItemName("LLuckChain");
+		Ladyluckchain = new Keychains(LadyluckchainID).setIconIndex(3).setItemName("LLuckChain");
 		LanguageRegistry.addName(Ladyluckchain, "Keychain: Lady Luck");
-		crabchain = new Keychains(1588).setIconIndex(4).setItemName("CCchain");
+		crabchain = new Keychains(crabchainID).setIconIndex(4).setItemName("CCchain");
 		LanguageRegistry.addName(crabchain, "Keychain: CrabClaw");
-		rosechain = new Keychains(1589).setIconIndex(5).setItemName("Rosechain");
+		rosechain = new Keychains(rosechainID).setIconIndex(5).setItemName("Rosechain");
 		LanguageRegistry.addName(rosechain, "Keychain: Divine Rose");
-		corrupt = new Keychains(1590).setIconIndex(255).setItemName("Corruptchain");
+		corrupt = new Keychains(corruptID).setIconIndex(255).setItemName("Corruptchain");
 		LanguageRegistry.addName(corrupt, "Corrupt Heart");
-		lionchain = new Keychains(1592).setIconIndex(6).setItemName("Lionchain");
+		lionchain = new Keychains(lionchainID).setIconIndex(6).setItemName("Lionchain");
 		LanguageRegistry.addName(lionchain, "Keychain: Lionheart");
-		onewingchain = new Keychains(1594).setIconIndex(7).setItemName("WingChain");
+		onewingchain = new Keychains(onewingchainID).setIconIndex(7).setItemName("WingChain");
 		LanguageRegistry.addName(onewingchain, "Keychain: One-Winged Angel");
 	}
 }

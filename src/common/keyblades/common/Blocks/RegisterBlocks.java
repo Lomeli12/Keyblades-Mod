@@ -2,6 +2,7 @@ package keyblades.common.Blocks;
 
 import keyblades.common.Main;
 import net.minecraft.src.*;
+import net.minecraftforge.common.*;
 import cpw.mods.fml.common.registry.*;
 
 public class RegisterBlocks {
@@ -9,21 +10,29 @@ public class RegisterBlocks {
 	public static Block gummiOreO;
 	public static Block DullCrystalore;
 	public static Block gummiBlockO;
-	public static Block Orichalcumore;
+	public static Block OrichalcumoreB;
+	
+	public static int gummiOreID;
+	public static int gummiBlockID;
+	public static int OrichalcumoreID;
+	public static int dullCrystalOreID;
+	public static void internalBlockRegistry(Block par0, String name2)
+	{
+		GameRegistry.registerBlock(par0);
+		LanguageRegistry.addName(par0, name2);
+	}
 	public static void registerBlocks()
 	{
+		StepSound stone = Block.soundStoneFootstep;
 		//Register Blocks
-		gummiOreO = new Blockores(1551, 1).setStepSound(Block.soundStoneFootstep).setHardness(5F).setResistance(1.0F).setBlockName("OGummiOre");
-		GameRegistry.registerBlock(gummiOreO);
-		LanguageRegistry.addName(gummiOreO, "Gummi Ore");
-		DullCrystalore = new Blockores(1552, 0).setStepSound(Block.soundStoneFootstep).setHardness(5F).setResistance(5.0F).setBlockName("ECrystal");
-		GameRegistry.registerBlock(DullCrystalore);
-		LanguageRegistry.addName(DullCrystalore, "Embedded Crystal");
-		gummiBlockO = new Blockores(1553, 2).setStepSound(Block.soundStoneFootstep).setHardness(6F).setResistance(2.0F).setBlockName("OGummiBlock");
-		GameRegistry.registerBlock(gummiBlockO);
-		LanguageRegistry.addName(gummiBlockO, "Gummi Block");
-		Orichalcumore = new Orichalcumore(1579, 3).setStepSound(Block.soundStoneFootstep).setHardness(25F).setResistance(10.0F).setBlockName("OrichalOre");
-		GameRegistry.registerBlock(Orichalcumore);
-		LanguageRegistry.addName(Orichalcumore, "Orichalcum Ore");
+		gummiOreO = new Blockores(gummiOreID, 1).setStepSound(stone).setHardness(5F).setResistance(1.0F).setBlockName("OGummiOre");
+		internalBlockRegistry(gummiOreO, "Gummi Ore");
+		DullCrystalore = new Blockores(dullCrystalOreID, 0).setStepSound(stone).setHardness(5F).setResistance(5.0F).setBlockName("ECrystal");
+		internalBlockRegistry(DullCrystalore,"Embedded Crystal");
+		gummiBlockO = new Blockores(gummiBlockID, 2).setStepSound(stone).setHardness(5F).setResistance(5.0F).setBlockName("OGummiBlock");
+		internalBlockRegistry(gummiBlockO, "Gummi Block");
+		OrichalcumoreB = new OrichalcumOre(OrichalcumoreID, 0).setStepSound(stone).setHardness(5F).setResistance(5.0F).setBlockName("Orichalcumore");
+		internalBlockRegistry(OrichalcumoreB, "Orichalcum Ore");
 	}
+	
 }
